@@ -37,9 +37,12 @@ df.describe()
 
 df.isnull().sum()
 
+"""## Delete Attribute Periode Data, Tanggal, Stasiun, Critical"""
+
 df['Category'].unique()
 
-"""## Delete Attribute Periode Data, Tanggal, Stasiun, Critical"""
+category_counts = df['Category'].value_counts()
+print(category_counts)
 
 df = df.drop(columns=['Periode Data','Tanggal','Stasiun','MAX','Critical'])
 
